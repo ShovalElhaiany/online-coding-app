@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    image: shovalelhaiany/online-coding-app-server:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_data:/app/logs/
+  frontend:
+    image: shovalelhaiany/online-coding-app-client:latest
+    ports:
+      - "3000:3000"
+networks:
+      mynetworks:
+volumes:
+  db_data:
+  backend_data:
